@@ -67,7 +67,7 @@ via de regra tem que desmembrar em atributos simples. isso vai ajudar em uma fut
 	As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
 
 
-### RELACIONAMENTO 
+### RELAÇÃO
 
 Tabela bidimensional com características especificas, compostas por linhas e colunas, criada a partir de uma entidade.
 "toda relação é uma tabela, mas nem toda tabela é uma relação."
@@ -88,10 +88,39 @@ Tabela bidimensional com características especificas, compostas por linhas e co
 * Uma relação é um conjunto de registros (tuplas) que representam um modelo de uma entidade;
 * Cada registro representa uma instância de entidade, e o conjunto de todas as instâncias, com seus atributos, é chamado de relação.
 
+### RELACIONAMENTO 
+
+As Entidades podem ser conectadas entre si por meio de Relacionamentos. Trata-se de uma estrutura que indica a associação de elementos de uma ou mais entidades.
+
+### Porque precisamos de relacionamento?
+
+Como os dados de diferentes entidades são armazenados em tabelas distintas, geralmente precisamos combinar duas ou mais tabelas para responder as perguntas especificas dos usuários.
+
+Por exemplo, podemos querer saber quais produtos, e em qual quantidade, foram adquiridos por um cliente em particular. Precisaremos então de dados das tabelas de clientes, de pedidos e produtos para obter essa informação.
+
+Representamos relacionamentos por meio de um losango que conecta uma ou mais entidades.
+
+### Grau de um relacionamento
+
+O grau de um relacionamento define o número de entidades que participam do relacionamento. Assim, um relacionamento pode ser: 
+* Unário (recursivo ou autorrelacionamento);
+* Binário;
+* Ternário.
+
+Os relacionamentos mais comuns são os de grau (binários)
+
+### EFETUANDO relacionamentos entre múltiplas tabelas
+
+* Cada linha de dados em uma tabela deve ser identificada de forma única usando-se uma Chave Primaria (identificador exclusivo)
+* Usamos uma chave estrangeira para relacionar os dados entre múltiplas tabelas.
+* Usamos para isso o relacionamento entre chave primaria de uma tabela com a chave estrangeria em outra tabela.
+
+
 
 ### Abreviações
 
 * MER: Lista de entidades, Atributos e relacionamentos, que traz informações sobre tipos de dados, restrições descrições de entidades e outras.
 * DER: representação gráfica associada ao MER (ou parte dele).
+
 
 
