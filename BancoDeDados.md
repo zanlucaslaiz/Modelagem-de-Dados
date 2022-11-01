@@ -117,5 +117,11 @@ As tarefas a seguir devem ser realizadas para que seja possivel efetuar modelage
 * Normalizar para reduzir redundância;
 * Desnormalizar para aumentar performasse;
 
+## Dicionário de Dados
+
+Um dicionário de dados é um documento usado para armazenar informações sobre o conteúdo, formato e a estrutura de um banco de dados, assim como os relacionamentos entre os seus elementos.
+É importante manter um dicionário de dados para limitar erros ao criar a estrutura física do banco de dados no computador.
+Também chamado de "Repositório de metadados".
+
 
 
