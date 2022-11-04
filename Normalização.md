@@ -107,3 +107,11 @@ Determinante: "lado esquerdo" de uma DF, como o X em X -> Y (Y é "dependente");
 Dependência Funcional Trivial: dependência que não pode deixar de ser satisfeita. Uma DF é trivial se o lado direito da expressão é um subconjunto do lado esquerdo. 
 A -> B é uma DF trivial se B for um subconjunto de A.
 Exemplo: {ID_Func, Nome_Func} -> ID_Func é uma DF trivial pelo ID_Func é um subconjunto de {ID_Func, Nome_Func}
+
+### FNBC - Normalizando
+
+Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a seguir:
+* Encontrar uma dependência funcional não-trivial X -> Y que viole a condição de FNBC. X não deve ser uma superchave.
+* Dividir a tabela em duas: 
+** Uma com os atributos XY, ou seja, todos os atributos da dependência.
+** outra com os atributos X juntamente com os atributos restantes da tabela original.
