@@ -34,9 +34,9 @@ Nesse repositório você vai encontrar:
 
 Fontes.
 ________________________________________________________________
-https://powerbi.microsoft.com/pt-br/what-is-data-modeling/
-https://www.youtube.com/playlist?list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD
-https://sites.google.com/site/fkbancodedados1/modelodados/niveismodelagem
-https://learn.microsoft.com/pt-br/azure/architecture/data-guide/big-data/non-relational-data
+(https://powerbi.microsoft.com/pt-br/what-is-data-modeling/)
+(https://www.youtube.com/playlist?list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD)
+(https://sites.google.com/site/fkbancodedados1/modelodados/niveismodelagem)
+(https://learn.microsoft.com/pt-br/azure/architecture/data-guide/big-data/non-relational-data)
 
 
