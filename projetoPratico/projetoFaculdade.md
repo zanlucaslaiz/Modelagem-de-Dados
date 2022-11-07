@@ -16,7 +16,9 @@ Fases:
 * Implementação;
 * Teste Básicos;
 
-## Regras do Negócio
+## Levantamento dos Requisitos
+
+### Regras do Negócio
 
 * Um aluno só pode estar matriculado em um curso por vez;
 * Alunos possuem um código de identificação (RA);
@@ -39,3 +41,58 @@ Fases:
 
 
 Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pode ter esquecido de passar alguma informação ou simplesmente não sabia que determinada informação seria relevante, por isso logo do projeto algumas coisas podem acabar mudando.
+
+## Identificação de Entidades:
+* Aluno;
+* Professor;
+* Disciplina;
+* Curso;
+* Departamento;
+
+## Identificação de Relacionamentos:
+* Aluno está matriculado em Curso;
+* Aluno Cursa Disciplina;
+* Aluno Realizou Disciplina;
+* Disciplina Pertence a Curso;
+* Professor Ministra Disciplina;
+* Professor Pertence a Departamento;
+* Departamento é Responsável por Disciplina;
+* Departamento Controla Curso;
+* Disciplina Depende de Disciplina;
+
+## Idendificação de Atributos:
+
+### Aluno:
+* Número de Matrícula;
+* Nome;
+* Sobrenome;
+* Endereço;
+	* Rua
+	* Número
+	* Bairro
+	* CEP
+	* Cidade
+	* Estado
+* Código do curso.
+
+### Professor:
+* Código do Professor;
+* Nome;
+* Sobrenome;
+* Código do Deparmento.
+
+### Disciplina:
+* Código de Disciplina;
+* Nome da Disciplina;
+* Descrição Curricular;
+* Código do Departamento;
+* Número de Alunos;
+
+### Curso
+* Código do Curso;
+* Nome do Curso;
+* Código do Departamento.
+
+### Departamento:
+* Código do Departamento;
+* Nome do Departamento.
