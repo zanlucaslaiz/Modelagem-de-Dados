@@ -52,6 +52,12 @@ Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pod
 * Turma;
 * Histórico;
 
+## Entidades Associativas
+
+* Curso_Disciplina
+* Disc_Historico
+* Prof_Disciplina
+
 ## Identificação de Relacionamentos:
 * Aluno está matriculado em Curso;
 * Aluno Cursa Disciplina;
@@ -116,7 +122,8 @@ Aluno - Contato
 
 ### Departamento:
 * Código do Departamento;
-* Nome do Departamento.
+* Nome do Departamento;
+* Localização.
 
 ### Histórico:
 
@@ -136,3 +143,5 @@ Aluno - Contato
 * Num_Alunos;
 * Data_Inicio;
 * Data_Fim;
+
+
