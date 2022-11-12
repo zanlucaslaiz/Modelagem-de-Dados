@@ -123,4 +123,12 @@ Os relacionamentos mais comuns são os de grau (binários)
 * DER: representação gráfica associada ao MER (ou parte dele).
 
 
+### Entidade Associativa
+
+Uma entidade Associativo é implementada para resolver um relacionamento muitos-para-muitos (N:M).
+Gera uma tabela associativa, que permite mapear duas ou mais tabelas fazendo referência às chaves primárias de cada tabela.
+Contém chaves estrangeiras, cada uma em um relacionamento um-para-muitos da tabela de junção para as tabelas de dados individuais.
+Sua chave primária, no geral, é composta a partir das colunas de chaves estrangeiras em si.
+Uma tabela associativa também pode ser chamada de: Tabela de Referência Cruzada, Tabela de Intersecção, Tabela de Junção, Tabela de Mapeamento, Tabela de Transição, ou ainda outros nomes.
+
 

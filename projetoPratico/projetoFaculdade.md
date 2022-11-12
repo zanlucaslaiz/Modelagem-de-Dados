@@ -9,8 +9,9 @@
 Fases:
 * Levantamento dos Requisitos;
 * Identificação de Entidades e Relacionamentos;
-* Modelo E-R;
-* Diagrama E-R;
+* Diagrama E-R: Cardinalidade;
+* Diagrama E-R: Eliminando N:M;
+* Modelo Lógico;
 * Dicionário de dados;
 * Normalização;
 * Implementação;
@@ -48,22 +49,28 @@ Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pod
 * Disciplina;
 * Curso;
 * Departamento;
+* Turma;
+* Histórico;
 
 ## Identificação de Relacionamentos:
 * Aluno está matriculado em Curso;
 * Aluno Cursa Disciplina;
 * Aluno Realizou Disciplina;
+* Aluno Pertence a Historico;
+* Aluno pertence a turma;
 * Disciplina Pertence a Curso;
 * Professor Ministra Disciplina;
 * Professor Pertence a Departamento;
 * Departamento é Responsável por Disciplina;
 * Departamento Controla Curso;
 * Disciplina Depende de Disciplina;
+* Historico pertence a aluno;
+* Historico compoe disciplina;
 
 ## Idendificação de Atributos:
 
 ### Aluno:
-* Número de Matrícula;
+* RA;
 * Nome;
 * Sobrenome;
 * Endereço;
@@ -73,13 +80,26 @@ Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pod
 	* CEP
 	* Cidade
 	* Estado
-* Código do curso.
+* Código do curso;
+* Telefone;
+
+Aluno - Contato
+
+* Status
+* Filiação
+* Sexo
+* Contato
+	* Whatsapp
+	* E-mail
+* Cod_Turma
+* CPF
 
 ### Professor:
 * Código do Professor;
 * Nome;
 * Sobrenome;
-* Código do Deparmento.
+* Código do Departamento;
+* Status.
 
 ### Disciplina:
 * Código de Disciplina;
@@ -87,6 +107,7 @@ Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pod
 * Descrição Curricular;
 * Código do Departamento;
 * Número de Alunos;
+* Carga Horaria;
 
 ### Curso
 * Código do Curso;
@@ -96,3 +117,22 @@ Obs.: Pode ser que essas regras de negócio estejam faltando, pois o cliente pod
 ### Departamento:
 * Código do Departamento;
 * Nome do Departamento.
+
+### Histórico:
+
+* Cod_Histórico;
+* Notas;
+* Média;
+* Frequencia;
+* Periodo_Realização;
+* RA;
+* Cod_Diciplina;
+
+### Turma:
+
+* Cod_turma;
+* Periodo;
+* Cod_Curso;
+* Num_Alunos;
+* Data_Inicio;
+* Data_Fim;
