@@ -1,3 +1,8 @@
+# Dicionario de Dados
+
+## Entidades
+
+
 | Entidade     	| Relacionamento   	| Nome do Relacionamento 	| Descrição                                                               	|
 |--------------	|------------------	|------------------------	|-------------------------------------------------------------------------	|
 | Departamento 	| Professor        	| Pertence               	| Tabela para cadastro dos departamentos da faculdade                     	|
@@ -20,5 +25,21 @@
 |              	| Aluno            	| Cursa                  	|                                                                         	|
 |              	| Curso_Disciplina 	| Pertence               	|                                                                         	|
 |              	| Disc_Histórico   	| Compoe                 	|                                                                         	|
-| Histórico    	| Aluno            	| Pertence               	|                                                                         	|
+| Histórico    	| Aluno            	| Pertence               	| Tabela para geração de histórico de aluno                                	|
 |              	| Disc_Histórico   	| É Composto             	|                                                                         	|
+
+## Entidades Associativas
+
+| Entidades        	| Relacionamento 	| Nome do Relacionamento 	| Descrição                                       	|
+|------------------	|----------------	|------------------------	|-------------------------------------------------	|
+| Disc_Histórico   	| Disciplina     	| Compoe                 	| Tabela Associativa entre Disciplina e Histórico 	|
+|                  	| Histórico      	| É composto             	|                                                 	|
+|------------------	|----------------	|------------------------	|-------------------------------------------------	|
+| Curso_Disciplina 	| Curso          	| Possui                 	| Tabela Associativa entre Curso e Disciplina     	|
+|                  	| Disciplina     	| Pertence               	|                                                 	|
+|------------------	|----------------	|------------------------	|-------------------------------------------------	|
+| Prof_Disciplina  	| Professor      	| Leciona                	| Tabela associativa entre Professor e Disciplina 	|
+|                  	| Disciplina     	| É lecionada            	|                                                 	|
+
+## Atributos
+
