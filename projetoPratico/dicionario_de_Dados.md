@@ -46,6 +46,9 @@
 |------------------	|----------------	|------------------------	|-------------------------------------------------	|
 | Prof_Disciplina  	| Professor      	| Leciona                	| Tabela associativa entre Professor e Disciplina 	|
 |                  	| Disciplina     	| É lecionada            	|                                                 	|
+|------------------	|----------------	|------------------------	|-------------------------------------------------	|
+| Aluno_Disc    	| Aluno         	| cursa                 	| Tabela associativa entre aluno e Disciplina 	    |
+|                  	| Disciplina     	| É cursada              	|                                                 	|
 
 ## Atributos - Departamento
 
@@ -86,22 +89,27 @@
 
 ## Atributos - Aluno
 
-| Atributo        |        | Tipo de dados | Comprimento | Restrições   | Descrição                                             |
-|-----------------|--------|---------------|-------------|--------------|-------------------------------------------------------|
-| RA              |        | Inteiro       | 8 bytes     | PK. NOT NULL | Código de identificação do aluno                      |
-| Nome_Aluno      |        | Caractere     | 25 bytes    | NOT NULL     | Nome do Aluno                                         |
-| Sobrenome_Aluno |        | Caractere     | 40 bytes    | NOT NULL     | Sobrenome do aluno                                    |
-| CPF             |        | Caractere     | 40 bytes    | NOT NULL     | CPF do aluno                                          |
-| Telefone        |        | Caractere     | 40 bytes    | NOT NULL     | Telefone* do aluno                                    |
-| Status          |        | Caractere     | 1 bytes     | NOT NULL     | Status da matricula do aluno (S para sim, N para não) |
-| Contato         |        | Caractere     | 40 bytes    | NOT NULL     | Formas de contato com o aluno                         |
-| Cod_Turma       |        | inteiro       | 4 bytes     | FK. NOT NULL | Código de identificação da turma                      |
-| Cod_Curso       |        | inteiro       | 4 Bytes     | FK. NOT NULL | Código de identificação do curso                      |
-| Sexo            |        | Caractere     | 1 bytes     | NOT NULL     | Sexo do aluno                                         |
-| Filiação        |        | Caractere     | 80 bytes    | NOT NULL     | Nome dos pais do aluno                                |
-| Endereço        | Rua    | Caractere     | 80 bytes    | NOT NULL     | Endereço do aluno divido em Rua, número e CEP         |
-|                 | número | Caractere     | 10 bytes    | NOT NULL     |                                                       |
-|                 | CEP    | Caractere     | 10 bytes    | NOT NULL     |                                                       |
+| Atributo        | Tipo de dados | Comprimento | Restrições   | Descrição                                             |
+|-----------------|---------------|-------------|--------------|-------------------------------------------------------|
+| RA              | Inteiro       | 8 bytes     | PK. NOT NULL | Código de identificação do aluno                      |
+| Nome_Aluno      | Caractere     | 25 bytes    | NOT NULL     | Nome do Aluno                                         |
+| Sobrenome_Aluno | Caractere     | 40 bytes    | NOT NULL     | Sobrenome do aluno                                    |
+| CPF             | Caractere     | 40 bytes    | NOT NULL     | CPF do aluno                                          |
+| Telefone fixo   | Caractere     | 20 bytes    | NULL         | Telefone fixo do aluno                                |
+| Celular         | Caractere     | 20 bytes    | NOT NULL     | Celular do aluno                                      |
+| Status          | Caractere     | 1 bytes     | NOT NULL     | Status da matricula do aluno (S para sim, N para não) |
+| whatsapp        | Caractere     | 40 bytes    | NOT NULL     | Whatsapp do aluno                                     |
+| e-mail          | Caractere     | 40 bytes    | NOT NULL     | E-mail do aluno                                       |
+| Cod_Turma       | inteiro       | 4 bytes     | FK. NOT NULL | Código de identificação da turma                      |
+| Cod_Curso       | inteiro       | 4 Bytes     | FK. NOT NULL | Código de identificação do curso                      |
+| Sexo            | Caractere     | 1 bytes     | NOT NULL     | Sexo do aluno                                         |
+| Mãe             | Caractere     | 80 bytes    | NULL         | Nome da mãe do aluno                                  |
+| Pai             | Caractere     | 80 bytes    | NULL         | Nome do pai do aluno                                  |
+| Rua             | Caractere     | 80 bytes    | NOT NULL     | Nome da rua que o aluno mora                          |
+| número          | Caractere     | 10 bytes    | NOT NULL     | Número da casa que o aluno mora                       |
+| CEP             | Caractere     | 10 bytes    | NOT NULL     | CEP                                                   |
+| Estado          | Caractere     | 2 bytes     | NOT NULL     | estado que o aluno mora                               |
+| Cidade          | Caractere     | 10 bytes    | NOT NULL     | cidade que o aluno mora                               |
 
 ## Atributos - Disciplina 
 
@@ -144,4 +152,11 @@
 | Atributo       	| Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	|
 |----------------	|---------------	|-------------	|------------------	|---------------------------------------	|
 | cod_professor  	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação do professor  	|
+| cod_disciplina 	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação da disciplina 	|
+
+## Atributo - Aluno_Disc
+
+| Atributo       	| Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	|
+|----------------	|---------------	|-------------	|------------------	|---------------------------------------	|
+| cod_aluno      	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação do aluno      	|
 | cod_disciplina 	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação da disciplina 	|
