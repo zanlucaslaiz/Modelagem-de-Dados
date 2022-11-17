@@ -95,8 +95,6 @@
 | Nome_Aluno      | Caractere     | 25 bytes    | NOT NULL     | Nome do Aluno                                         |
 | Sobrenome_Aluno | Caractere     | 40 bytes    | NOT NULL     | Sobrenome do aluno                                    |
 | CPF             | Caractere     | 40 bytes    | NOT NULL     | CPF do aluno                                          |
-| Telefone fixo   | Caractere     | 20 bytes    | NULL         | Telefone fixo do aluno                                |
-| Celular         | Caractere     | 20 bytes    | NOT NULL     | Celular do aluno                                      |
 | Status          | Caractere     | 1 bytes     | NOT NULL     | Status da matricula do aluno (S para sim, N para não) |
 | whatsapp        | Caractere     | 40 bytes    | NOT NULL     | Whatsapp do aluno                                     |
 | e-mail          | Caractere     | 40 bytes    | NOT NULL     | E-mail do aluno                                       |
@@ -105,11 +103,7 @@
 | Sexo            | Caractere     | 1 bytes     | NOT NULL     | Sexo do aluno                                         |
 | Mãe             | Caractere     | 80 bytes    | NULL         | Nome da mãe do aluno                                  |
 | Pai             | Caractere     | 80 bytes    | NULL         | Nome do pai do aluno                                  |
-| Rua             | Caractere     | 80 bytes    | NOT NULL     | Nome da rua que o aluno mora                          |
-| número          | Caractere     | 10 bytes    | NOT NULL     | Número da casa que o aluno mora                       |
-| CEP             | Caractere     | 10 bytes    | NOT NULL     | CEP                                                   |
-| Estado          | Caractere     | 2 bytes     | NOT NULL     | estado que o aluno mora                               |
-| Cidade          | Caractere     | 10 bytes    | NOT NULL     | cidade que o aluno mora                               |
+
 
 ## Atributos - Disciplina 
 
@@ -160,3 +154,41 @@
 |----------------	|---------------	|-------------	|------------------	|---------------------------------------	|
 | cod_aluno      	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação do aluno      	|
 | cod_disciplina 	| inteiro       	| 4 bytes     	| PK. FK. NOT NULL 	| Código de identificação da disciplina 	|
+
+## Atributo - telefone_aluno
+
+| Atributo       	    | Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	    |
+|-----------------------|---------------	|-------------	|------------------	|---------------------------------------	    |
+| cod_telefone_aluno	| inteiro       	| 4 bytes     	| PK. NOT NULL   	| Código de identificação telefone      	    |
+| RA                	| inteiro       	| 8 bytes     	| FK. NOT NULL   	| Código de identificação do aluno       	    |
+| cod_tipo_telefone    	| inteiro       	| 4 bytes     	| FK. NOT NULL  	| Código de identificação do tipo de telefone   |
+| num_telefone       	| caractere       	| 20 bytes     	| NOT NULL      	| Numero de telefone do aluno            	    |
+
+## Atributo - tipo_telefone
+
+| Atributo       	    | Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	     |
+|-----------------------|---------------	|-------------	|------------------	|---------------------------------------	     |
+| cod_tipo_telefone	    | inteiro       	| 4 bytes     	| PK. NOT NULL 	    | Código de identificação do tipo de telefone    |
+| tipo_telefone         | caractere       	| 20 bytes     	| NOT NULL   	    | Tipo de telefone                         	     |
+
+## Atributo - endereço_aluno
+
+| Atributo           | Tipo de dados | Comprimento | Restrições   | Descrição                                             |
+|------------------- |---------------|-------------|--------------|-------------------------------------------------------|
+| RA                 | Inteiro       | 8 bytes     | FK. NOT NULL | Código de identificação do aluno                      |
+| cod_endereço_aluno | inteiro       | 4 bytes     | PK NOT NULL  | código do endereço do aluno                           |
+| cod_tipo_logradouro| Inteiro       | 4 bytes     | FK NOT NULL  | Código do tipo de logradouro                          |
+| nome_rua           | Caractere     | 80 bytes    | NOT NULL     | Nome da rua que o aluno mora                          |
+| núm_rua            | Caractere     | 10 bytes    | NOT NULL     | Número da casa que o aluno mora                       |
+| Bairro             | Caractere     | 10 bytes    | NOT NULL     | Bairro que o aluno mora                               |
+| Complemento        | Caractere     | 10 bytes    | NOT NULL     | Complemento da casa do aluno                          |
+| CEP                | Caractere     | 10 bytes    | NOT NULL     | CEP                                                   |
+| Estado             | Caractere     | 2 bytes     | NOT NULL     | estado que o aluno mora                               |
+| Cidade             | Caractere     | 10 bytes    | NOT NULL     | cidade que o aluno mora                               |
+
+## Atributo - tipo_lougradouro
+
+| Atributo           | Tipo de dados | Comprimento | Restrições   | Descrição                                             |
+|------------------- |---------------|-------------|--------------|-------------------------------------------------------|
+| cod_tipo_logradouro| Inteiro       | 4 bytes     | PK NOT NULL  | Código do tipo de logradouro                          |
+| tipo_lougradouro   | caractere     | 20 bytes    | NOT NULL     | tipo de logradouro                                    |
