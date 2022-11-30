@@ -68,7 +68,6 @@
 |-------------------	|---------------	|-------------	|--------------	|-----------------------------------------	|
 | Cod_Departamento  	| Inteiro       	| 2 bytes     	| PK. NOT NULL 	| Código de identificação do departamento 	|
 | Nome_Departamento 	| Caractere     	| 20 bytes    	| NOT NULL     	| Nome do departamento                    	|
-| Localização       	| Caractere     	| 10 bytes    	| NOT NULL     	| Localização do departamento             	|
 
 ## Atributos - Professor
 
@@ -133,7 +132,7 @@
 | Atributo           	| Tipo de dados 	| Comprimento 	| Restrições  	| Descrição                                    	|
 |--------------------	|---------------	|-------------	|-------------	|----------------------------------------------	|
 | cod_histórico      	| inteiro       	| 2 bytes     	| PK. NOT NUL 	| Código do historico do aluno                 	|
-| RA                 	| inteiro       	| 6 bytes     	| FK. NOT NUL 	| Código de identificação do aluno             	|
+| RA                 	| Caractere       	| 6 bytes     	| FK. NOT NUL 	| Código de identificação do aluno             	|
 | data_inicio        	| data             	| 4 bytes     	| NOT NULL    	| Data de inicio                             	|
 | data_fim          	| data             	| 4 bytes     	| NULL         	| Data de fim                                	|
 
@@ -164,7 +163,7 @@
 
 | Atributo       	| Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	|
 |----------------	|---------------	|-------------	|------------------	|---------------------------------------	|
-| RA             	| inteiro       	| 6 bytes     	| PK. FK. NOT NULL 	| Código de identificação do aluno      	|
+| RA             	| caractere      	| 8 bytes     	| PK. FK. NOT NULL 	| Código de identificação do aluno      	|
 | cod_disciplina 	| inteiro       	| 2 bytes     	| PK. FK. NOT NULL 	| Código de identificação da disciplina 	|
 
 ## Atributo - telefone_aluno
@@ -172,7 +171,7 @@
 | Atributo       	    | Tipo de dados 	| Comprimento 	| Restrições       	| Descrição                             	    |
 |-----------------------|---------------	|-------------	|------------------	|---------------------------------------	    |
 | cod_telefone_aluno	| inteiro       	| 1 byte     	| PK. NOT NULL   	| Código de identificação telefone      	    |
-| RA                	| inteiro       	| 6 bytes     	| FK. NOT NULL   	| Código de identificação do aluno       	    |
+| RA                	| caractere       	| 8 bytes     	| FK. NOT NULL   	| Código de identificação do aluno       	    |
 | cod_tipo_telefone    	| inteiro       	| 1 byte     	| FK. NOT NULL  	| Código de identificação do tipo de telefone   |
 | num_telefone       	| caractere       	| 11 bytes     	| NOT NULL      	| Numero de telefone do aluno            	    |
 
@@ -187,7 +186,7 @@
 
 | Atributo           | Tipo de dados | Comprimento | Restrições         | Descrição                                             |
 |------------------- |---------------|-------------|--------------      |-------------------------------------------------------|
-| RA                 | Inteiro       | 6 bytes     | PK. FK. NOT NULL   | Código de identificação do aluno                      |
+| RA                 | caractere     | 8 bytes     | PK. FK. NOT NULL   | Código de identificação do aluno                      |
 | cod_endereço_aluno | inteiro       | 1 byte      | PK NOT NULL        | código do endereço do aluno                           |
 | cod_tipo_logradouro| Inteiro       | 1 byte      | FK NOT NULL        | Código do tipo de logradouro                          |
 | nome_rua           | Caractere     | 50 bytes    | NOT NULL           | Nome da rua que o aluno mora                          |
