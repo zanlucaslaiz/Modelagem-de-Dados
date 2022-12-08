@@ -72,3 +72,29 @@ registros (linhas)
 ### REGISTRO
 * linha, ou tuplas
 * Cada entrada individual em uma tabela. Trata-se de um conjunto de campos relacionados que caracterizam os dados de uma entidade única.
+
+Comentários no SQL Server:
+-- mais o comentário.
+
+### USE
+
+O comando USE instrui o SGBDR a utilizar o banco de dados especificado para rodar os comandos.
+Eventualmente pode acabar rodando no banco de dados errado, o comando USE evita isso.
+
+Sintaxe:
+    
+    USE nome do banco_de_dados
+
+sp_helpdb:
+
+Informa o tamanho, taxa de crescimento, e local do banco de dados. 
+
+Sintaxe:
+
+    sp_helpdb nome_do_banco_de_dados
+
+Informa os indices:
+
+    sp_help + NomeDaTabela
+
+informa os indices, chaves e campos, atributos tipos de atributos de uma tabela (stored procedures, comandos pré-programados)

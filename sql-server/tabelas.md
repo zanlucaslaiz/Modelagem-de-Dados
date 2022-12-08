@@ -45,3 +45,17 @@ Excluir uma tabela:
 
 * caso a tabela tenha dados ao exclui-la perdemos todos.
 * caso a tabela esteja ligada por algum relacionamento a outra tabela primeiro devemos excluir o relacionamento e depois excluir a tabela.
+
+Inserir dados:
+
+    INSERT INTO nome_tabela (coluna1, coluna2)
+    VALUES (valor1, valor2)
+
+Excluir dados:
+
+    TRUNCATE TABLE nome_da_tabela
+
+* Remove todas as linhas de uma tabela sem registrar as exclisões de linhas individuais.
+* TRUNCATE TABLE é como a instrução DELETE sem usar a cláusula WHERE.
+* Entretanto, TRUNCATE TABLE é mais rápida e utiliza menos recursos de sistema e log de transações.
+
